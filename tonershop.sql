@@ -1,8 +1,21 @@
-create database Tonershop; 
-Use database Tonerschop;
+-- Tonershop.sql
 
-create table T_Drucker(
-Drucker_ID int auto_increment primary key,
-Drucker_name varchar(10) not null,
-Hauptuser varchar(10) not null
+CREATE DATABASE IF NOT EXISTS Tonershop;
+USE Tonershop;
+
+CREATE TABLE printers (
+    Printer_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Seriennummer VARCHAR(100),
+    Location VARCHAR(100),
+    Server VARCHAR(100),
+    Type VARCHAR(100),
+    First_keyuser VARCHAR(100),
+    IP_address VARCHAR(45),
+    Yellow INT,
+    Magenta INT,
+    Cyan INT,
+    Black INT,
+    Ph_Conductor VARCHAR(100),
+    Wastebottle VARCHAR(100),
+    Second_keyuser VARCHAR(100)
 );
